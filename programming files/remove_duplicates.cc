@@ -1,17 +1,18 @@
 // CC Bugs introduced: line 8 syntax error (no ;) and line 14 syntax error (no })
+// AM Fixed bug on line 9 by adding ; and bug on line 15 by adding  }
 #include <iostream>
 #include <vector>
 #include <algorithm>
 using namespace std;
 
 vector<int> remove_duplicates(vector<int> arr, vector<int>& removed_elements){
-    vector<int> unique_arr
+    vector<int> unique_arr;
     sort(arr.begin(), arr.end());
     int n = arr.size();
     for(int i=0; i<n; i++){
         if(i == 0 || arr[i] != arr[i-1]){
             unique_arr.push_back(arr[i]);
-        
+        }
         else{
             removed_elements.push_back(arr[i]);
         }
