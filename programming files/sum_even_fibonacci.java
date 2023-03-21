@@ -1,4 +1,4 @@
-//mg
+// bugs introduced: removed p from public - mg
 ublic class sum_even_fibonacci {
     public static void main(String[] args) {
         int a = 0, b = 1;
